@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thread Clothing</title>
   <style>
-    /* ================= RESET ================= */
     * {
       margin: 0;
       padding: 0;
@@ -26,7 +25,6 @@
       text-decoration: none;
     }
 
-    /* ================= HEADER ================= */
     header {
       background-color: white;
       position: fixed;
@@ -66,7 +64,6 @@
       height: 35px;
     }
 
-    /* Hamburger Menu */
     .menu-icon {
       display: none;
       font-size: 32px;
@@ -78,13 +75,11 @@
       display: none;
     }
 
-    /* When checkbox is checked, show nav on mobile */
     #menu-toggle:checked~.nav-links {
       display: flex;
       flex-direction: column;
     }
 
-    /* ================= BUTTON ================= */
     .button1 {
       background-color: white;
       color: black;
@@ -102,7 +97,6 @@
       color: white;
     }
 
-    /* ================= SECTIONS ================= */
     section {
       height: 125vh;
       background-size: cover;
@@ -118,27 +112,27 @@
       padding: 20px;
     }
 
+    /* ✅ FIXED IMAGE PATHS (capital I for Images folder) */
     #menscollec {
-      background-image: url('../Images/12344.jpg');
+      background-image: url('Images/12344.jpg');
     }
 
     #womenscollec {
-      background-image: url('../Images/womenscollectionhome.jpg');
+      background-image: url('Images/womenscollectionhome.jpg');
     }
 
     #kidscollec {
-      background-image: url('../Images/kidscollectionhome.jpg');
+      background-image: url('Images/kidscollectionhome.jpg');
     }
 
     #acccollec {
-      background-image: url('../Images/acccollectionhome.jpg');
+      background-image: url('Images/acccollectionhome.jpg');
     }
 
     section a {
       color: white;
     }
 
-    /* ================= FOOTER ================= */
     .footer {
       background-color: #24262b;
       padding: 70px 0;
@@ -229,7 +223,6 @@
       font-size: 14px;
     }
 
-    /* ================= RESPONSIVE ================= */
     @media (max-width: 992px) {
       .footer-col {
         width: 50%;
@@ -306,19 +299,19 @@
 
   <!-- HEADER -->
   <header>
-  <img src="Images/logo.jpg" alt="Thread Clothing" class="logo">
+    <img src="Images/logo.jpg" alt="Thread Clothing" class="logo">
 
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="account.html">Log In/Sign Up</a></li>
-    <li><a href="#"><img src="Images/cart.png" alt="Cart"></a></li>
-  </ul>
-</header>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="account.html">Log In/Sign Up</a></li>
+      <li><a href="#"><img src="Images/cart.png" alt="Cart"></a></li>
+    </ul>
+  </header>
 
   <!-- SECTIONS -->
   <section id="menscollec">
@@ -359,44 +352,33 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Collection</h4>
           <ul>
-            <li><a href="men.html">
-                <p>Mens</p>
-              </a></li>
-            <li><a href="women.html">
-                <p>Womens</p>
-              </a></li>
-            <li><a href="kids.html">
-                <p>Kids</p>
-              </a></li>
-            <li><a href="accessories.html">
-                <p>Accessories</p>
-              </a></li>
+            <li><a href="men.html"><p>Mens</p></a></li>
+            <li><a href="women.html"><p>Womens</p></a></li>
+            <li><a href="kids.html"><p>Kids</p></a></li>
+            <li><a href="accessories.html"><p>Accessories</p></a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Contact Us</h4>
           <ul>
-            <li>
-              <p>Address: Karachi, Pakistan</p>
-            </li>
-            <li>
-              <p>Phone: 0333-2367996</p>
-            </li>
-            <li>
-              <p>Email: threadclothing@gmail.com</p>
-            </li>
+            <li><p>Address: Karachi, Pakistan</p></li>
+            <li><p>Phone: 0333-2367996</p></li>
+            <li><p>Email: threadclothing@gmail.com</p></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Follow Us</h4>
           <div class="social-links">
-            <a href="https://www.facebook.com/"><img src="../Images/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
-            <a href="https://twitter.com/i/flow/login"><img src="../Images/twitter.png" alt="Twitter"></a>
-            <a href="https://www.pinterest.com/"><img src="../Images/pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.facebook.com/"><img src="Images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="Images/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="Images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.pinterest.com/"><img src="Images/pinterest.png" alt="Pinterest"></a>
           </div>
         </div>
       </div>
@@ -409,5 +391,4 @@
   </div>
 
 </body>
-
-</html> 
+</html>
