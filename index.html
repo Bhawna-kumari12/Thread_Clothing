@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thread Clothing</title>
+  <style>
+    /* ================= RESET ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      margin-top: 120px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 25px 0 black;
+      padding: 0 30px;
+      z-index: 1000;
+    }
+
+    header img.logo {
+      height: 90px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: black;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links li a:hover {
+      color: #2874f0;
+    }
+
+    .nav-links li img {
+      height: 35px;
+    }
+
+    /* Hamburger Menu */
+    .menu-icon {
+      display: none;
+      font-size: 32px;
+      cursor: pointer;
+      color: black;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    /* When checkbox is checked, show nav on mobile */
+    #menu-toggle:checked~.nav-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ================= BUTTON ================= */
+    .button1 {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      margin-left: 50px;
+      font-size: 25px;
+      font-style: italic;
+      padding: 12px 25px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button1:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      height: 125vh;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-style: oblique;
+      font-size: 40px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #menscollec {
+      background-image: url('../Images/12344.jpg');
+    }
+
+    #womenscollec {
+      background-image: url('../Images/womenscollectionhome.jpg');
+    }
+
+    #kidscollec {
+      background-image: url('../Images/kidscollectionhome.jpg');
+    }
+
+    #acccollec {
+      background-image: url('../Images/acccollectionhome.jpg');
+    }
+
+    section a {
+      color: white;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li p {
+      font-size: 13px;
+      color: #bbbbbb;
+    }
+
+    .footer-col ul li a p {
+      color: #bbbbbb;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a p:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer-col .social-links img {
+      height: 40px;
+      width: 40px;
+    }
+
+    #copyright {
+      text-align: center;
+      background-color: white;
+      color: black;
+      letter-spacing: 2px;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 992px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 25px;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 10px;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      section {
+        height: auto;
+        padding: 60px 20px;
+        font-size: 30px;
+      }
+
+      .footer-col {
+        width: 100%;
+        text-align: center;
+      }
+
+      .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 480px) {
+      header img.logo {
+        height: 70px;
+      }
+
+      .button1 {
+        font-size: 18px;
+        margin-left: 0;
+      }
+
+      section h3,
+      section h4 {
+        font-size: 24px;
+      }
+
+      #copyright {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+  <img src="Images/logo.jpg" alt="Thread Clothing" class="logo">
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="account.html">Log In/Sign Up</a></li>
+    <li><a href="#"><img src="Images/cart.png" alt="Cart"></a></li>
+  </ul>
+</header>
+
+  <!-- SECTIONS -->
+  <section id="menscollec">
+    <h3>Best Men's Collection</h3>
+    <h4>New Arrivals Here</h4>
+    <a href="men.html"><button class="button1">Explore the Collection</button></a>
+  </section>
+
+  <section id="womenscollec">
+    <h3>Best Women's Collection</h3>
+    <h4>New Arrivals Here</h4>
+    <a href="women.html"><button class="button1">Explore the Collection</button></a>
+  </section>
+
+  <section id="kidscollec">
+    <h3>Best Kids Collection</h3>
+    <h4>New Arrivals Here</h4>
+    <a href="kids.html"><button class="button1">Explore the Collection</button></a>
+  </section>
+
+  <section id="acccollec">
+    <h3>Best Accessories Collection</h3>
+    <a href="accessories.html"><button class="button1">Explore the Collection</button></a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Thread Clothing</h4>
+          <ul>
+            <li>
+              <p>
+                Discover Thread Clothing, where style meets comfort effortlessly. Our curated collection blends timeless
+                elegance with contemporary flair, offering quality and craftsmanship in every stitch.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul>
+            <li><a href="men.html">
+                <p>Mens</p>
+              </a></li>
+            <li><a href="women.html">
+                <p>Womens</p>
+              </a></li>
+            <li><a href="kids.html">
+                <p>Kids</p>
+              </a></li>
+            <li><a href="accessories.html">
+                <p>Accessories</p>
+              </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <p>Address: Karachi, Pakistan</p>
+            </li>
+            <li>
+              <p>Phone: 0333-2367996</p>
+            </li>
+            <li>
+              <p>Email: threadclothing@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><img src="../Images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="../Images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.pinterest.com/"><img src="../Images/pinterest.png" alt="Pinterest"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COPYRIGHT -->
+  <div id="copyright">
+    <p>© 2025 Thread Clothing | Designed by Bhawna</p>
+  </div>
+
+</body>
+
+</html> 

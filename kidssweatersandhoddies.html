@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kids Sweaters and Hoddies</title>
+  <style>
+    header img {
+      height: 120px;
+      margin-left: 40px;
+    }
+
+    header {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      display: flex;
+      box-shadow: 0 0 25px 0 black;
+    }
+
+    header * {
+      display: inline;
+      padding-top: 15px;
+      letter-spacing: 1px;
+    }
+
+    header li {
+      margin: 30px;
+      justify-content: space-between;
+      padding: 20px 20px;
+    }
+
+    header li a {
+      color: black;
+      text-decoration: none;
+      padding-left: 20px
+    }
+
+    header li img {
+      height: 40px;
+    }
+
+    nav {
+      margin-top: 110px;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+    }
+
+    nav * {
+      display: inline;
+      padding-top: 15px;
+      letter-spacing: 1px;
+    }
+
+    nav li {
+      margin: 30px;
+      justify-content: space-between;
+      padding: 20px 20px;
+    }
+
+    nav li a {
+      color: white;
+      text-decoration: none;
+      padding-left: 115px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+
+    nav li a:hover {
+      text-decoration: underline;
+    }
+
+
+
+    main {
+      background-color: black;
+    }
+
+    #sec1 {
+      margin-top: 150px;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5px;
+    }
+
+    .firstSection>div {
+      width: 30%;
+    }
+
+    .leftsection1 {
+      font-size: 25px;
+      background-color: black;
+    }
+
+    .leftsection1 h5 {
+      display: grid;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding-top: 190px;
+      font-style: italic;
+      font-family: sans-serif;
+    }
+
+    .leftsection1 p {
+      display: grid;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding-top: 5px;
+      font-size: 18px;
+      color: gray;
+      font-style: oblique;
+      font-family: fantasy;
+    }
+
+    .button {
+      background-color: white;
+      color: black;
+      text-align: center;
+      border-radius: 15px;
+      margin-left: 100px;
+      font-size: 18px;
+      font-style: italic;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 12px 25px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: gray;
+      color: white;
+      font-style: italic;
+    }
+
+    #price {
+      color: white;
+      padding-top: 7px;
+      padding-bottom: 5px;
+      font-style: italic;
+    }
+
+    .rightsection1 img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .rightsection2 {
+      font-size: 25px;
+      background-color: black;
+    }
+
+    .rightsection2 h5 {
+      display: grid;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding-top: 190px;
+      font-style: italic;
+      font-family: sans-serif;
+    }
+
+    .rightsection2 p {
+      display: grid;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding-top: 5px;
+      font-size: 18px;
+      color: gray;
+      font-style: oblique;
+      font-family: fantasy;
+    }
+
+    .leftsection2 img {
+      width: 100%;
+      height: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li p {
+      font-size: 13px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      border-radius: 50%;
+      color: #ffffff;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer-col .social-links img {
+      height: 40px;
+      width: 40px;
+    }
+
+    #copyright {
+      height: 20px;
+      padding-left: 40px;
+      background-color: white;
+      color: black;
+      letter-spacing: 5px;
+    }
+  </style>
+  <script>
+
+    function cart() {
+      alert("Product is Added to Cart");
+    }
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="../Images/logo.jpg">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="account.html">Log In/Sign Up</a></li>
+      <li><a href="#"><img src="../Images/cart.png" height="50px"></a></li>
+    </ul>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="men.html">MEN</a></li>
+      <li><a href="women.html">WOMEN</a></li>
+      <li><a href="kids.html">KIDS</a></li>
+      <li><a href="accessories.html">ACCESSORIES</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="sec1" class="firstSection">
+      <div class="leftsection1">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material </p>
+        <p>Our Hoddies are comfy as cotton </p>
+        <p id="price">Pkr 4500</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+      <div class="rightsection1">
+        <img src="../Images/sh1.webp" alt="">
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftsection2">
+        <img src="../Images/sh5.webp" alt="">
+      </div>
+      <div class="rightsection2">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material</p>
+        <p>Our Hoddies are comfy as cotton</p>
+        <p id="price">Pkr 3500</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftsection1">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material</p>
+        <p>Our Hoddies are comfy as cotton</p>
+        <p id="price">Pkr 5000</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+      <div class="rightsection1">
+        <img src="../Images/sh2.webp" alt="">
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftsection2">
+        <img src="../Images/sh3.webp" alt="">
+      </div>
+      <div class="rightsection2">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material</p>
+        <p>Our Hoddies are comfy as cotton</p>
+        <p id="price">Pkr 3000</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftsection1">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material</p>
+        <p>Our Hoddies are comfy as cotton</p>
+        <p id="price">Pkr 4000</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+      <div class="rightsection1">
+        <img src="../Images/sh5.webp" alt="">
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftsection2">
+        <img src="../Images/sh6.webp" alt="">
+      </div>
+      <div class="rightsection2">
+        <h5>KIDS HODDIES</h5>
+        <p>Best Kids Washing Material</p>
+        <p>Our Hoddies are comfy as cotton</p>
+        <p id="price">Pkr 5000</p>
+        <p>All Sizes Available.</p>
+        <button class="button" onclick="cart()">ADD TO CART</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Thread Clothing</h4>
+          <ul>
+            <li>
+              <p>Discover Thread Clothing, where style meets comfort effortlessly. Our curated collection blends
+                timeless
+                elegance with contemporary flair, offering quality and craftsmanship in every stitch. From casual
+                essentials to sophisticated statement pieces, our diverse range caters to every occasion and personal
+                style. Embrace your individuality with thoughtfully designed pieces that empower you to express your
+                unique identity. Redefine your wardrobe at [Brand Name], where fashion is inclusive, empowering, and
+                enjoyable.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul>
+            <li><a href="men.html">
+                <p>Mens</p>
+              </a></li>
+            <li><a href="women.html">
+                <p>Womens</p>
+              </a></li>
+            <li><a href="kids.html">
+                <p>Kids</p>
+              </a></li>
+            <li><a href="accessories.html">
+                <p>Accessories</p>
+              </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact us</h4>
+          <ul>
+            <li>
+              <p>Address: Karachi Pakistan</p>
+            </li>
+            <li>
+              <p>Contact Number: 03XX-XXXXXXX</p>
+            </li>
+            <li>
+              <p>Email: threadclothing@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><img src="../Images/facebook.png"></a>
+            <a href="https://www.instagram.com/"><img src="../Images/instagram.png"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="../Images/twitter.png"></a>
+            <a href="https://www.pinterest.com/"><img src="../Images/pinterest.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div id="copyright">
+          <p> Copyright 2023 By Thread Clothing Designed By Sushel, Waniya,
+            Youmna And Bhawna </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

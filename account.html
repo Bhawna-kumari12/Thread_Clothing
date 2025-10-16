@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Thread Clothing</title>
+  <style>
+    header img {
+      height: 120px;
+      margin-left: 40px;
+    }
+
+    header {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      display: flex;
+      box-shadow: 0 0 25px 0 black;
+    }
+
+    header * {
+      display: inline;
+      padding-top: 15px;
+      letter-spacing: 1px;
+    }
+
+    header li {
+      margin: 30px;
+      justify-content: space-between;
+      padding: 20px 20px;
+    }
+
+    header li a {
+      color: black;
+      text-decoration: none;
+      padding-left: 20px;
+    }
+
+    header li img {
+      height: 40px;
+    }
+
+    body {
+      background: #515352;
+      background-size: cover;
+    }
+
+    .container1 {
+      position: absolute;
+      margin: auto;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 430px;
+      width: 100%;
+      background: #fff;
+      border-radius: 7px;
+    }
+
+    header1{
+     font-size: 30px;
+     padding-left: 145px;
+    }
+
+    .container1 .registration {
+      display: none;
+      top: 60%;
+    }
+
+    #check:checked~.registration {
+      display: block;
+    }
+
+    #check:checked~.login {
+      display: none;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .container1 .form {
+      padding: 2rem;
+    }
+
+    .form header {
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form input {
+      height: 60px;
+      width: 100%;
+      padding: 15px;
+      font-size: 17px;
+      margin-bottom: 1.3rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .form input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .form a {
+      font-size: 16px;
+      color: #009579;
+      text-decoration: none;
+    }
+
+    .form a:hover {
+      text-decoration: underline;
+    }
+
+    .form input.button {
+      color: #fff;
+      background: #009579;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 1.7rem;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .form input.button:hover {
+      background: #006653;
+    }
+
+    .signup {
+      font-size: 17px;
+      text-align: center;
+    }
+
+    .signup label {
+      color: #009579;
+    }
+
+    .signup label:hover {
+      text-decoration: underline;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+      margin-top: 650px;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li p {
+      font-size: 13px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      border-radius: 50%;
+      color: #ffffff;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer-col .social-links img {
+      height: 40px;
+      width: 40px;
+    }
+
+    #copyright {
+      height: 20px;
+      padding-left: 40px;
+      background-color: white;
+      color: black;
+      letter-spacing: 5px;
+    }
+
+
+  </style>
+  <script>
+    
+function login() {
+  var email = document.getElementById('loginEmail').value;
+  var password = document.getElementById('loginPassword').value;
+
+  if (email && password) {
+    alert('Login successful!');
+  } else {
+    alert('Please enter both email and password.');
+  }
+}
+
+function signup() {
+  var name = document.getElementById('signupName').value;
+  var email = document.getElementById('signupEmail').value;
+  var password = document.getElementById('signupPassword').value;
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  var passwordMatchError = document.getElementById('passwordMatchError');
+
+  if (name && email && password && confirmPassword) {
+    if (password.length < 8) {
+      passwordMatchError.textContent = 'Password must be at least 8 characters long.';
+    } else if (password != confirmPassword) {
+      passwordMatchError.textContent = 'Passwords do not match.';
+    } else {
+      alert('Signup successful!\nName: ' + name + '\nEmail: ' + email);
+    }
+  } else {
+    alert('Please enter all required fields.');
+  }
+}
+
+  </script>
+</head>
+<body>
+  <header>
+    <img src="../Images/logo.jpg">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="account.html">Log In/Sign Up</a></li>
+        <li><a href="#"><img src="../Images/cart.png" height="30px"></a></li>
+      </ul>
+  </header>
+  <hr>
+  <br>
+  <div class="container1">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header1 role="banner">Login</header1>
+      <input type="text" id="loginEmail" placeholder="Enter your email">
+      <input type="password" id="loginPassword" placeholder="Enter your password">
+      <a href="#">Forgot password?</a>
+      <input type="button" class="button" value="Login" onclick="login()">
+      <div class="signup">
+        <span class="signup">Don't have an account?
+          <label for="check" onclick="toggleForm()">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header1 role="banner">Signup</header1>
+      <input type="text" id="signupName" placeholder="Enter your name">
+      <input type="text" id="signupEmail" placeholder="Enter your email">
+      <input type="password" id="signupPassword" placeholder="Create a password">
+      <input type="password" id="confirmPassword" placeholder="Confirm your password">
+      <span id="passwordMatchError" style="color: red;"></span>
+      <input type="button" class="button" value="Signup" onclick="signup()">
+      <div class="signup">
+        <span class="signup">Already have an account?
+          <label for="check" onclick="toggleForm()">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <br>
+
+
+</body>
+
+</html>

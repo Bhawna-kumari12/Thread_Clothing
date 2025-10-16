@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <style>
+    header img {
+      height: 120px;
+      margin-left: 40px;
+    }
+
+    header {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      display: flex;
+      box-shadow: 0 0 25px 0 black;
+    }
+
+    header * {
+      display: inline;
+      padding-top: 15px;
+      letter-spacing: 1px;
+    }
+
+    header li {
+      margin: 30px;
+      justify-content: space-between;
+      padding: 20px 20px;
+    }
+
+    header li a {
+      color: black;
+      text-decoration: none;
+      padding-left: 20px;
+    }
+
+    header li img {
+      height: 40px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container1 {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-bottom: 50px;
+      width: 85%;
+      background: #fff;
+      border-radius: 6px;
+      padding: 20px 60px 30px 40px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container1 .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .container1 .content .left-side {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      position: relative;
+    }
+
+    .content .left-side::before {
+      content: '';
+      position: absolute;
+      height: 70%;
+      width: 2px;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #afafb6;
+    }
+
+    .content .left-side .details {
+      margin: 14px;
+      text-align: center;
+    }
+
+   
+    .content .left-side .details .topic {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .content .left-side .details .text-one,
+    .content .left-side .details .text-two {
+      font-size: 14px;
+      color: #afafb6;
+    }
+
+    .container1 .content .right-side {
+      width: 75%;
+      margin-left: 75px;
+    }
+
+    .content .right-side .topic-text {
+      font-size: 23px;
+      font-weight: 600;
+      color: #3e2093;
+    }
+
+    .right-side .input-box {
+      height: 50px;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    .right-side .input-box input,
+    .right-side .input-box textarea {
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: #F0F1F8;
+      border-radius: 6px;
+      padding: 0 15px;
+      resize: none;
+    }
+
+    .right-side .message-box {
+      min-height: 110px;
+    }
+
+    .right-side .input-box textarea {
+      padding-top: 6px;
+    }
+
+    .right-side .button {
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    .right-side .button input[type="button"] {
+      color: #fff;
+      font-size: 18px;
+      outline: none;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: #3e2093;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button input[type="button"]:hover {
+      background: #5029bc;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li p {
+      font-size: 13px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      border-radius: 50%;
+      color: #ffffff;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    .footer-col .social-links img {
+      height: 40px;
+      width: 40px;
+    }
+
+    #copyright {
+      height: 20px;
+      padding-left: 40px;
+      background-color: white;
+      color: black;
+      letter-spacing: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="../Images/logo.jpg">
+      <ul id="spacing1">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="account.html">Log In/Sign Up</a></li>
+        <li><a href="#"><img src="../Images/cart.png"></a></li>
+      </ul>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br><br><br><br>
+  <div class="container1">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <div class="topic">Address</div>
+          <div class="text-one">Karachi, Sindh</div>
+          <div class="text-two">Pakistan</div>
+        </div>
+        <div class="phone details">
+          <div class="topic">Phone</div>
+          <div class="text-one">03XX-XXXXXXX</div>
+          <div class="text-two">021-XXXXXXXX</div>
+        </div>
+        <div class="email details">
+          <div class="topic">Email</div>
+          <div class="text-one">threadclothing@gmail.com</div>
+          <div class="text-two">info.threadclothing@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any work from me or any types of quries related to my tutorial, you can send me message
+          from here. It's my pleasure to help you.</p>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Enter your name">
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Enter your email">
+          </div>
+          <div class="input-box message-box">
+            <input type="text" placeholder="Enter your message">
+          </div>
+          <div class="button">
+            <input type="button" value="Send Now">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Thread Clothing</h4>
+          <ul>
+            <li>
+              <p>Discover Thread Clothing, where style meets comfort effortlessly. Our curated collection blends
+                timeless
+                elegance with contemporary flair, offering quality and craftsmanship in every stitch. From casual
+                essentials to sophisticated statement pieces, our diverse range caters to every occasion and personal
+                style. Embrace your individuality with thoughtfully designed pieces that empower you to express your
+                unique identity. Redefine your wardrobe at [Brand Name], where fashion is inclusive, empowering, and
+                enjoyable.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul>
+            <li><a href="men.html">
+                <p>Mens</p>
+              </a></li>
+            <li><a href="women.html">
+                <p>Womens</p>
+              </a></li>
+            <li><a href="kids.html">
+                <p>Kids</p>
+              </a></li>
+            <li><a href="accessories.html">
+                <p>Accessories</p>
+              </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact us</h4>
+          <ul>
+            <li>
+              <p>Address: Karachi Pakistan</p>
+            </li>
+            <li>
+              <p>Contact Number: 03XX-XXXXXXX</p>
+            </li>
+            <li>
+              <p>Email: threadclothing@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><img src="../Images/facebook.png"></a>
+            <a href="https://www.instagram.com/"><img src="../Images/instagram.png"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="../Images/twitter.png"></a>
+            <a href="https://www.pinterest.com/"><img src="../Images/pinterest.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div id="copyright">
+          <p> Copyright 2023 By Thread Clothing Designed By Sushel, Waniya,
+            Youmna And Bhawna </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
